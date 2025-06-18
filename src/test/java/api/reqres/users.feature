@@ -1,37 +1,43 @@
-Feature: Probar los endpoints de usuarios de ReqRes API
+Feature: Probar los endpoints de la API de JSONPlaceholder
 
   Background:
-    * url 'https://reqres.in'
+    * url 'https://jsonplaceholder.typicode.com'
 
-  Scenario: Obtener la lista de usuarios de la página 2
-    Given path '/api/users'
-    And param page = 2
+  Scenario: Obtener todos los posts
+    Given path '/posts'
+    When method get
+    Then status 200
+    * match response == '#array'
+    * match response != []
+
+  Scenario: Obtener un solo post que existe
+    Given path '/posts/1'
     When method get
     Then status 200
     * print response
-    * match response.page == 2
-    * match response.data != null
-    * match response.data[0].id == 7
+    * match response.id == 1
+    * match response.userId == 1
+    * match response.title != null
 
-  Scenario: Obtener un solo usuario que existe
-    Given path '/api/users/2'
+  Scenario: Intentar obtener un post que NO existe
+    Given path '/posts/9999'
     When method get
-    Then status 200
-    * print response
-    * match response.data.id == 2
-    * match response.data.email == 'janet.weaver@reqres.in'
+    Then status 404
 
-  # ---- ESCENARIO CORREGIDO ----
-  # La API está devolviendo 401, así que verificamos que el status sea 401.
-  Scenario: Intentar obtener un usuario que NO existe
-    Given path '/api/users/23'
-    When method get
-    Then status 401
-
-  # ---- ESCENARIO CORREGIDO ----
-  # La API también devuelve 401 para el POST, así que verificamos status 401.
-  Scenario: Crear un nuevo usuario (POST)
-    Given path '/api/users'
-    And request { "name": "morpheus", "job": "leader" }
+  Scenario: Crear un nuevo post (POST)
+    Given path '/posts'
+    And request { title: 'foo', body: 'bar', userId: 1 }
     When method post
-    Then status 401
+    Then status 201
+    * print response
+    * match response.title == 'foo'
+    * match response.id == 101
+
+  Scenario: Actualizar un post existente (PUT)
+    Given path '/posts/1'
+    And request { id: 1, title: 'foo updated', body: 'bar updated', userId: 1 }
+    When method put
+    Then status 200
+    * print response
+    * match response.title == 'foo updated'
+    * match response.id == 1
