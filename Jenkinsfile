@@ -1,15 +1,11 @@
 pipeline {
-
     agent any
-
 
     tools {
         maven 'MAVEN_HOME'
     }
 
-
     stages {
-
         stage('Checkout') {
             steps {
                 echo 'Descargando el código desde el repositorio...'
@@ -17,23 +13,19 @@ pipeline {
             }
         }
 
-
         stage('Build & Test') {
             steps {
                 echo 'Ejecutando pruebas con Maven...'
-
-                sh 'mvn clean test -Dtest=api.reqres.ReqresRunner'
+                sh 'mvn clean test -Dtest=api.reqres.ReqresTests'
             }
         }
     }
 
-
     post {
         always {
             echo 'Publicando reportes HTML...'
-
             publishHTML(target: [
-                allowMissing: true,
+                allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'target/karate-reports',
