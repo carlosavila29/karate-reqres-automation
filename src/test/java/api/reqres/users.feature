@@ -41,3 +41,10 @@ Feature: Probar los endpoints de la API de JSONPlaceholder
     * print response
     * match response.title == 'foo updated'
     * match response.id == 1
+
+  Scenario: Eliminar un post existente (DELETE)
+    Given path '/posts/1'
+    When method delete
+    Then status 200
+    * print response
+    * match response == {}

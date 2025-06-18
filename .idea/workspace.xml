@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb68827d-b67d-47d6-85d3-07fb5b402f25" name="Changes" comment="añadir nuevo escenario">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/reqres/users.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/reqres/users.feature" afterDir="false" />
-    </list>
+    <list default="true" id="cb68827d-b67d-47d6-85d3-07fb5b402f25" name="Changes" comment="añadir nuevo escenario1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750211574194</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="añadir nuevo escenario1">
+      <option name="closed" value="true" />
+      <created>1750212238176</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750212238177</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,6 +190,7 @@
     <MESSAGE value="Añadir Jenkinsfile para CI 2" />
     <MESSAGE value="version2" />
     <MESSAGE value="añadir nuevo escenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadir nuevo escenario" />
+    <MESSAGE value="añadir nuevo escenario1" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadir nuevo escenario1" />
   </component>
 </project>
