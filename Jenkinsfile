@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Ejecutando pruebas con Maven...'
                 // En Mac/Linux se usa 'sh' para ejecutar comandos de terminal
-                sh 'mvn clean test'
+                sh 'mvn clean test -Dtest=api.reqres.ReqresRunner'
             }
         }
     }

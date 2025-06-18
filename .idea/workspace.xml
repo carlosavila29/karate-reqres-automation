@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb68827d-b67d-47d6-85d3-07fb5b402f25" name="Changes" comment="Añadir archivo README">
+    <list default="true" id="cb68827d-b67d-47d6-85d3-07fb5b402f25" name="Changes" comment="Añadir Jenkinsfile para CI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,12 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1750202327044</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Añadir Jenkinsfile para CI">
+      <option name="closed" value="true" />
+      <created>1750203885692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750203885692</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Añadir archivo README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir archivo README" />
+    <MESSAGE value="Añadir Jenkinsfile para CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir Jenkinsfile para CI" />
   </component>
 </project>
